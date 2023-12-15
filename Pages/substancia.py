@@ -2,8 +2,8 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-url = 'C:/Users/luciu/Workspace/Proj_Qualid_Agua_Ar/analysis_water_air/Datasets/substancias_quimicas.csv'
-df2 = pd.read_csv(url)
+url = 'C:/Users/luciu/Workspace/App_Agua_Ar/app_water_air/Datasets/substancias_quimicas.csv'
+df2 = pd.read_csv(url, sep=',')
 
 def rosca(data, nome_col1, nome_col2, cidade):
     # Gráfico de Rosca
