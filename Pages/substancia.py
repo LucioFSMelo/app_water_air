@@ -50,6 +50,9 @@ def graf_barras(data, cidade):
     # Exibir gráfico
     return st.plotly_chart(fig3)
 
+
+
+#Função para mostrar a página
 def substancia_nociva():
     st.title("Análise de Substâncias Encontradas na Água")
 
