@@ -50,7 +50,7 @@ def graf_barras(data, cidade):
     # Exibir gráfico
     return st.plotly_chart(fig3)
 
-def substancia():
+def substancia_nociva():
     st.title("Análise de Substâncias Encontradas na Água")
 
     efeitos_saude = {'2, 4, 6 Triclorofenol': 'Efeitos dermatológicos, gastrointestinais e neurológicos',
@@ -153,4 +153,4 @@ def substancia():
 
 
 if __name__=='__main__':
-    substancia()
+    substancia_nociva()

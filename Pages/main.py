@@ -1,7 +1,7 @@
 import streamlit as st
-#from substancia_nociva import substancia
-#from qualidade import qualidade
-#from home import home
+from substancia import substancia_nociva
+from qualidade import quality
+from home import home
 
 # Configuração da página
 # Configuração da página
@@ -29,7 +29,7 @@ if paginas == "Home":
     home()
 
 if paginas == "Qualidade: ar e água":
-    qualidade()
+    quality()
 
 if paginas == "Substancias Nocivas a saúde":
-    substancia()
+    substancia_nociva()

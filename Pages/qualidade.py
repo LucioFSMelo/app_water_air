@@ -68,7 +68,7 @@ def graf_scater(data):
     if graf_Scatter:
         return st.plotly_chart(fig2)
 
-def qualidade():
+def quality():
     # Iniciando a aplicação Streamlit
     st.title("BRASIL - Qualidade da Água e do Ar")
     st.text("A qualidade do ar varia de 0 (má qualidade) a 100 (melhor qualidade)")
@@ -102,4 +102,4 @@ def qualidade():
 
 
 if __name__=="__main__":
-    qualidade()
+    quality()
