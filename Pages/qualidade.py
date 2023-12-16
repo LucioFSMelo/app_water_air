@@ -12,7 +12,7 @@ def load_data(url):
     return df
 
 
-df1 = load_data('C:/Users/luciu/Workspace/App_Agua_Ar/app_water_air/Datasets/cities_air_quality_water_pollution.18-10-2021 (1).csv')
+df1 = load_data(df1 = load_data('Datasets/cities_air_quality_water_pollution.18-10-2021 (1).csv'))
 
 # Retirando as aspas com a função strip()
 df1['pais'] = df1['pais'].str.strip(' ""')
