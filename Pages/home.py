@@ -8,8 +8,9 @@ def home():
             Curso: MBA em Ciências de Dados e Inteligência Artificial  
             Professo: Alex Cunha  
             Aluno: Lucio Flavio Santos de Melo  
-              
-            Ordem de Navegação das páginas:  
+            """)
+    
+    st.markdown("""Ordem de Navegação das páginas:  
             * Home
             * Qualidade: Água e Ar
             * Substancias Nocivas a Saúde""")
