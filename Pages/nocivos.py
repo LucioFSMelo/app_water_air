@@ -29,7 +29,7 @@ def criar_grafico_barras(data, cidade):
         height=400,
         barmode="stack"
     )
-    fig.update_layout(xaxis_title="Substância", yaxis_title="Resultado", legend_title="Grupo")
+    fig.update_layout(xaxis_title="Substância", yaxis_title="Resultado", legend_title="Grupo", paper_bgcolor="skyblue")
     st.plotly_chart(fig)
 
 def nocivo():
