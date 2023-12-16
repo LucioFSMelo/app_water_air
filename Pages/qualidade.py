@@ -128,6 +128,13 @@ def quality():
         st.write("## Poluição da Água")
         st.plotly_chart(create_gauge_chart(seleciona_dados['poluicao_agua'].values[0], 100, "Poluição da Água"))
 
+    st.markdown("""Fonte:  
+                * Publica: https://apublica.org/2022/03/agua-da-torneira-tem-produtos-quimicos-e-radioativos-em-763-cidades-brasileiras/  
+                * Mapa da água: https://mapadaagua.reporterbrasil.org.br/metodologia  
+                * Sisagua: https://sisagua.saude.gov.br/sisagua/paginaExterna.jsf  
+                * Saneamento em Pauta: https://blog.brkambiental.com.br/poluentes-da-agua/  
+                * Tera Ambiental: https://blog.brkambiental.com.br/poluentes-da-agua/""")
+
     #Filtrando um gráfico por região
     df_region = df_brasil[df_brasil["regiao"] == seleciona_estado]
 
@@ -136,13 +143,6 @@ def quality():
 
     #Passando o segundo gráfico
     graf_scater(df_region)
-
-    st.markdown("""Fonte:  
-                * Publica: https://apublica.org/2022/03/agua-da-torneira-tem-produtos-quimicos-e-radioativos-em-763-cidades-brasileiras/  
-                * Mapa da água: https://mapadaagua.reporterbrasil.org.br/metodologia  
-                * Sisagua: https://sisagua.saude.gov.br/sisagua/paginaExterna.jsf  
-                * Saneamento em Pauta: https://blog.brkambiental.com.br/poluentes-da-agua/  
-                * Tera Ambiental: https://blog.brkambiental.com.br/poluentes-da-agua/""")
 
 
 
