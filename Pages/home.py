@@ -14,9 +14,9 @@ def home():
             * Qualidade: Água e Ar
             * Substancias Nocivas a Saúde""")
     
-    st.markdown(""" **História da Empresa:** :blue[**PuraVida Solutions**]  
-                  
-                Em um mundo onde as cidades lutam para respirar, onde a água que bebemos é um reflexo de nossas ações, nasceu a PuraVida Solutions,  
+    st.markdown("**História da Empresa:** :blue[**PuraVida Solutions**]")
+    
+    st.markdown(""" Em um mundo onde as cidades lutam para respirar, onde a água que bebemos é um reflexo de nossas ações, nasceu a PuraVida Solutions,  
                 uma empresa dedicada a transformar a qualidade do ar que respiramos e a água que bebemos. 
                    
                 **Problemática Observada**  
