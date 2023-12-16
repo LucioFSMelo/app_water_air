@@ -95,6 +95,8 @@ def create_gauge_chart(value, max_value, title):
 def quality():
     # Iniciando a aplicação Streamlit
     st.title("BRASIL - Qualidade da Água e do Ar")
+    st.markdown("""Será que cidades com ar puro também cuidam melhor de suas fontes de água?  
+                Vejamos um comparativo entre **Qualidade do ar** e **Poluição da água**.""")
     st.text("A qualidade do ar varia de 0 (má qualidade) a 100 (melhor qualidade)")
     st.text('A poluição da água varia de 0 (sem poluição) a 100 (poluição extrema)')
 

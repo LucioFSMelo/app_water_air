@@ -106,7 +106,7 @@ def nocivo():
     criar_grafico_barras(filtered_df, escolha_cidade)
     # criar_grafico_rosca(filtered_df, 'substancia', 'resultado', escolha_cidade)
 
-    st.markdown("""Fonte do dados  
+    st.markdown("""Fonte dos dados  
                 Metodologia do Mapa da Água: https://mapadaagua.reporterbrasil.org.br/metodologia  
                 * VMP (Valor Máximo Permitido): concentração máxima permitida para cada substância na água.  
                 Este valor é determinado pelo Ministério da Saúde.  
