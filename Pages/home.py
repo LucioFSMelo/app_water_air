@@ -12,8 +12,8 @@ def home():
     
     st.markdown("""Ordem de Navegação das páginas:  
             * Home  
-                *Qualidade: Água e Ar  
-                * Substancias Nocivas a Saúde""")
+                :green[*Qualidade: Água e Ar]  
+                :red[* Substancias Nocivas a Saúde]""")
     
     st.markdown("**História da Empresa:** :blue[**PuraVida Solutions**]")
     
