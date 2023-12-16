@@ -1,6 +1,8 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+import plotly.graph_objects as go
+import altair as alt
 
 # Função para leitura do dataframe
 @st.cache_data
@@ -37,7 +39,8 @@ def graf_barras(data, nome_col1, nome_col2, estado):
         xaxis_title="Cidade",
         yaxis_title="Nível de Poluição da Água",
         coloraxis_colorbar_title="Nível de Poluição da Água",
-        barmode="group"
+        barmode="group",
+        paper_bgcolor="skyblue"
     )
 
     # Exibindo o gráfico
@@ -59,7 +62,8 @@ def graf_scater(data):
         title="Diferenças na Qualidade do Ar e Poluição da Água entre Cidades",
         xaxis_title="Qualidade do Ar",
         yaxis_title="Poluição da Água",
-        hovermode="closest"
+        hovermode="closest",
+        paper_bgcolor="skyblue"
     )
 
     # Exibir o gráfico
@@ -67,6 +71,26 @@ def graf_scater(data):
     graf_Scatter = st.sidebar.button("Água vs Ar")
     if graf_Scatter:
         return st.plotly_chart(fig2)
+    
+# Função para criar o gráfico de velocímetro
+
+# Função para criar o gráfico de velocímetro
+def create_gauge_chart(value, max_value, title):
+    fig = go.Figure(go.Indicator(
+        mode="gauge+number",
+        value=value,
+        domain={'x': [0, 1], 'y': [0, 1]},
+        title={'text': title}
+    ))
+
+    fig.update_layout(
+        width=240,
+        height=150,
+        margin=dict(l=20, r=20, b=20, t=20),
+        paper_bgcolor="skyblue"
+    )
+
+    return fig
 
 def quality():
     # Iniciando a aplicação Streamlit
@@ -85,9 +109,22 @@ def quality():
     seleciona_dados = df_brasil[(df_brasil["regiao"] == seleciona_estado) & (df_brasil["cidade"] == seleciona_cidades)]
 
     st.subheader(f"Dados para {seleciona_cidades}, {seleciona_estado}")
-    st.write(f"Qualidade do Ar: {seleciona_dados['qualidade_ar'].values[0]}")
-    st.write(f"Poluição da Água: {seleciona_dados['poluicao_agua'].values[0]}")
+    #st.write(f"Qualidade do Ar: {seleciona_dados['qualidade_ar'].values[0]}")
+    #st.write(f"Poluição da Água: {seleciona_dados['poluicao_agua'].values[0]}")
 
+    # Criação dos gráficos de velocímetro
+    st.subheader("Qualidade do Ar vs. Poluição da Água")
+
+    # Configuração dos widgets de coluna
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.write("## Qualidade do Ar")
+        st.plotly_chart(create_gauge_chart(seleciona_dados['qualidade_ar'].values[0], 100, "Qualidade do Ar"))
+
+    with col2:
+        st.write("## Poluição da Água")
+        st.plotly_chart(create_gauge_chart(seleciona_dados['poluicao_agua'].values[0], 100, "Poluição da Água"))
 
     #Filtrando um gráfico por região
     df_region = df_brasil[df_brasil["regiao"] == seleciona_estado]

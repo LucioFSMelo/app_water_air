@@ -1,7 +1,7 @@
 import streamlit as st
-from substancia import substancia_nociva
 from qualidade import quality
 from home import home
+from nocivos import nocivo
 
 # Configuração da página
 # Configuração da página
@@ -23,7 +23,7 @@ st.markdown('<div class="main"></div>', unsafe_allow_html=True)
 
 st.sidebar.title("MENU")
 
-paginas = st.sidebar.selectbox("Escolha uma página", ("Home", "Qualidade: ar e água", "Substancias Nocivas a Saúde"))
+paginas = st.sidebar.selectbox("Escolha uma página", ("Home", "Qualidade: ar e água", "Agentes"))
 
 if paginas == "Home":
     home()
@@ -31,5 +31,5 @@ if paginas == "Home":
 if paginas == "Qualidade: ar e água":
     quality()
 
-if paginas == "Substancias Nocivas a saúde":
-    substancia_nociva()
+if paginas == "Agentes":
+    nocivo()
