@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 
 def carregar_dados():
-    url = 'C:/Users/luciu/Workspace/App_Agua_Ar/app_water_air/Datasets/substancias_quimicas.csv'
+    url = 'Datasets/substancias_quimicas.csv'
     return pd.read_csv(url)
 
 def criar_grafico_rosca(data, nome_col1, nome_col2, cidade):
