@@ -15,7 +15,7 @@ def home():
                 :green[*Qualidade: Água e Ar]  
                 :red[* Substancias Nocivas a Saúde]""")
     
-    st.markdown("**História da Empresa:** :blue[**PuraVida Solutions**]")
+    st.markdown("**História da Empresa:** :blue[**PuraVida Solutions**] (Empresa fictícia)")
     
     st.markdown(""" Em um mundo onde as cidades lutam para respirar, onde a água que bebemos é um reflexo de nossas ações, nasceu a PuraVida Solutions,  
                 uma empresa dedicada a transformar a qualidade do ar que respiramos e a água que bebemos. 
